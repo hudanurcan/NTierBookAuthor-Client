@@ -1,0 +1,47 @@
+<!-- <h3>{{ title() }}</h3> -->
+<h1>Angular Yazar Yönetimi Uygulaması</h1>
+
+<!--zoneless sistem-->
+
+<!-- <ul>
+  @for(author of authors();track author.Id){
+  <li>{{ author.id }} - {{ author.firstName }} - {{ author.lastName }}</li>
+  }
+</ul> -->
+
+<hr />
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>İsim</th>
+    <th>Soyisim</th>
+    <!-- <th>İşlemler</th> -->
+  </tr>
+  @for(author of authors();track author.Id){
+  <tr>
+    <td>{{ author.id}}</td>
+    <td>{{ author.firstName }}</td>
+    <td>{{ author.lastName }}</td>
+    <td>
+      <button>Güncelle</button>
+      <button>Sil</button>
+    </td>
+  </tr>
+  }
+</table>
+
+
+<h4>Yeni Yazar Ekle</h4>
+
+<form (submit)="addAuthors($event)">
+  <!--Kategori ismi input'u-->
+<input type="text" placeholder="Yazar İsmi" [value]="newFirstName()" (input)="onNewFirstNameChange($event)" />
+
+<!--Acıklama input'u-->
+<input type="text" placeholder="Yazar Soyismi" [value]="newLastName()" (input)="onNewLastNameChange($event)"  />
+
+<button type="submit">Ekle</button>
+
+
+</form>

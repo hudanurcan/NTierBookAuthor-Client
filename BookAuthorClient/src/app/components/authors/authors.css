@@ -1,0 +1,167 @@
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f3f3f7;
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table headers */
+  th {
+    text-align: left;
+    padding: 12px 16px;
+    background: linear-gradient(to right, #fec4c4, #F5AFAF);
+    color: #5d5d5d;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    border-bottom: 2px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  
+  /* Table rows */
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 14px;
+  }
+  
+  /* Hover effect on rows */
+  tr:hover td {
+    background: #f1f1f1;
+    color: #2d2d2d;
+    box-shadow: inset 4px 0 0 #f76c6c;
+    transition: 0.15s ease-in-out;
+  }
+  
+  /* Zebra striping for rows */
+  tr:nth-child(even) td {
+    background: #fafafa;
+  }
+  
+  /* Mobile support */
+  @media (max-width: 600px) {
+    table {
+      font-size: 12px;
+    }
+  
+    td, th {
+      padding: 10px 12px;
+    }
+  }
+  
+  /* Headings */
+  h3 {
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+  
+  h4 {
+    font-family: "Segoe UI", sans-serif;
+    color: #f56b6b;
+    margin: 18px 0 10px;
+  }
+  
+  /* Form container */
+  form {
+    margin: 10px 0 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* Form input fields */
+  input[type="text"] {
+    background: #f9f9f9;
+    border: 1px solid #d1d1d1;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #f76c6c;
+    box-shadow: 0 0 0 1px rgba(247, 108, 108, 0.4);
+    background: #fff;
+  }
+  
+  /* Submit and action buttons */
+  button {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff7f7f, #ff4d4d);
+    color: #fff;
+    letter-spacing: 0.4px;
+    transition: transform 0.1s ease, box-shadow 0.15s ease;
+    white-space: nowrap;
+  }
+  
+  button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 8px rgba(255, 79, 79, 0.5);
+  }
+  
+  button:active {
+    transform: translateY(0);
+    box-shadow: 0 0 4px rgba(255, 79, 79, 0.3);
+  }
+  
+  /* Table row action buttons */
+  table td button {
+    padding: 6px 14px;
+    font-size: 12px;
+    margin-right: 6px;
+  }
+  
+  /* Update button (first button) */
+  table td button:first-child {
+    background: linear-gradient(135deg, #54a7fc, #4f8bff);
+  }
+  
+  /* Delete button (second button) */
+  table td button:last-child {
+    background: linear-gradient(135deg, #ff5c5c, #ff2b2b);
+  }
+  
+  /* Submit / secondary button customizations */
+  form button[type="submit"] {
+    background: linear-gradient(135deg, #6cc89d, #5ec17e);
+  }
+  
+  /* Cancel button in edit form */
+  form button[type="button"] {
+    background: #4a4a4a;
+    color: #d0d0d0;
+  }
+  
+  form button[type="button"]:hover {
+    background: #565656;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    input[type="text"], form button {
+      width: 100%;
+    }
+  }
+  
